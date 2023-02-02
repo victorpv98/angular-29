@@ -1,0 +1,32 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#Agregar">
+  Agregar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="Agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Agregar Productos</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Producto" [(ngModel)]="userDates[0].Descripcion" name="descripcion">
+            <label for="floatingInput">Descripcion</label>
+          </div>
+          <div class="form-floating">
+            <input type="number" class="form-control" id="floatingPassword" placeholder="Precio" [(ngModel)]="userDates[0].Precio" name="precio">
+            <label for="floatingPassword">Precio</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="Agregar()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
